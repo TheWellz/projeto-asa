@@ -1,0 +1,5 @@
+zone "pirangi.com" {
+    type master;
+    file "/etc/bind/db.pirangi.com";
+    allow-transfer { 127.0.0.1; };
+};
