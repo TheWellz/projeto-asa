@@ -17,6 +17,8 @@ RUN useradd -m gabriel && echo "gabriel:test123" | chpasswd && \
 
 COPY main.cf /etc/postfix/main.cf
 COPY 10-auth.conf /etc/dovecot/conf.d/10-auth.conf
+COPY 10-mail.conf /etc/dovecot/conf.d/10-mail.conf
+COPY 10-master.conf /etc/dovecot/conf.d/10-master.conf
 COPY dovecot.conf /etc/dovecot/dovecot.conf
 
 CMD ["sh", "-c", "service syslog-ng start ; service postfix start ; service dovecot start; tail -F /var/log/mail.log"]
