@@ -11,7 +11,6 @@ $TTL 604800
 @       IN  NS      ns
 @       IN  MX 10   mail.
 ns      IN  A       192.168.1.10  
-mail    IN  A       192.168.1.10
-webmail IN  A       192.168.1.10     
+mail    IN  A       192.168.1.10   
 www     IN  CNAME   @
 proxy   IN  CNAME   www
